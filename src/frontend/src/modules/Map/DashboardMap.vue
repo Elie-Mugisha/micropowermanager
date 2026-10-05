@@ -12,6 +12,9 @@ export default {
   mixins: [sharedMap, notify],
   methods: {
     drawClusters() {
+    if(!this.editableLayer){
+        return
+    }
       this.editableLayer.clearLayers()
       const geoData = this.mappingService.geoData
 
